@@ -17,13 +17,13 @@ import {
 import { useQueryState } from "nuqs";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { LangGraphLogoSVG } from "@/components/icons/langgraph";
 import { Label } from "@/components/ui/label";
 import { ArrowRight } from "lucide-react";
 import { PasswordInput } from "@/components/ui/password-input";
 import { getApiKey } from "@/lib/api-key";
 import { useThreads } from "./Thread";
 import { toast } from "sonner";
+import { appConfig } from "@/app-config";
 
 export type StateType = { messages: Message[]; ui?: UIMessage[] };
 
@@ -168,13 +168,13 @@ export const StreamProvider: React.FC<{ children: ReactNode }> = ({
         <div className="animate-in fade-in-0 zoom-in-95 bg-background flex max-w-3xl flex-col rounded-lg border shadow-lg">
           <div className="mt-14 flex flex-col gap-2 border-b p-6">
             <div className="flex flex-col items-start gap-2">
-              <LangGraphLogoSVG className="h-7" />
+              <span className="h-7 text-2xl leading-7" aria-hidden>🇨🇺</span>
               <h1 className="text-xl font-semibold tracking-tight">
-                Agent Chat
+                {appConfig.appName}
               </h1>
             </div>
             <p className="text-muted-foreground">
-              Welcome to Agent Chat! Before you get started, you need to enter
+              Welcome to {appConfig.appName}! Before you get started, you need to enter
               the URL of the deployment and the assistant / graph ID.
             </p>
           </div>
