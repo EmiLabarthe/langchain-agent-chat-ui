@@ -6,5 +6,5 @@ export const appConfig = {
   /** Display name of the application (used in headers, titles, and metadata) */
   appName: "CUBANO LIBRE",
   /** Short description (used in page metadata and welcome copy) */
-  appDescription: "TU CUBANO COMPRADOR COMPULSIVO MANITO QUE TU QUIERE",
+  appDescription: "TU ASESOR DE COMPRAS MANITO QUE TU QUIERE",
 } as const;
